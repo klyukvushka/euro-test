@@ -1,13 +1,12 @@
 import React from "react";
 import { styled } from "../../config/theme";
 
-const menu = ["главная", "услуги", "кейсы", "о компании", " контакты"];
-
 type Props = {
   className?: string;
+  menu: string[];
 };
 
-const MenuComponent: React.FC<Props> = ({ className }) => {
+const MenuComponent: React.FC<Props> = ({ className, menu }) => {
   return (
     <nav className={className}>
       <ul className="bottom-menu">

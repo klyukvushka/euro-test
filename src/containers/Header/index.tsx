@@ -4,10 +4,39 @@ import { Menu } from "../../components/Menu";
 import { Container } from "../../components/styled";
 import { TopMenu } from "../../components/TopMenu";
 import { styled } from "../../config/theme";
+import {
+  ClockIcon,
+  MailIcon,
+  PhoneIcon,
+  PingIcon,
+} from "../../components/Icons";
 
 type Props = {
   className?: string;
 };
+const menu = ["главная", "услуги", "кейсы", "о компании", " контакты"];
+
+const topMenu = [
+  {
+    icon: <PhoneIcon />,
+    text: "8 (111) 222-33-44",
+    to: "tel:8-111-222-33-44",
+  },
+  {
+    icon: <ClockIcon />,
+    text: "Пн-Пт 10:00-18:00",
+  },
+  {
+    icon: <MailIcon />,
+    text: "order@buhone.ru",
+    to: "mailto:order@buhone.ru",
+  },
+  {
+    icon: <PingIcon />,
+    text: "Невский пр. 130",
+    to: "https://goo.gl/maps/PwHM3K5yuzt15hap6",
+  },
+];
 
 const HeaderComponent: React.FC<Props> = ({ className }) => {
   return (
@@ -15,8 +44,8 @@ const HeaderComponent: React.FC<Props> = ({ className }) => {
       <Container className="header-container">
         <Logo />
         <div className="menu-block">
-          <TopMenu />
-          <Menu />
+          <TopMenu topMenu={topMenu} />
+          <Menu menu={menu} />
         </div>
       </Container>
     </header>

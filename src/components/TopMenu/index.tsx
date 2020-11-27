@@ -1,30 +1,7 @@
 import React from "react";
 import { styled } from "../../config/theme";
-import { ClockIcon, MailIcon, PhoneIcon, PingIcon } from "../Icons";
 
-const topMenu = [
-  {
-    icon: <PhoneIcon />,
-    text: "8 (111) 222-33-44",
-    to: "tel:8-111-222-33-44",
-  },
-  {
-    icon: <ClockIcon />,
-    text: "Пн-Пт 10:00-18:00",
-  },
-  {
-    icon: <MailIcon />,
-    text: "order@buhone.ru",
-    to: "mailto:order@buhone.ru",
-  },
-  {
-    icon: <PingIcon />,
-    text: "Невский пр. 130",
-    to: "https://goo.gl/maps/PwHM3K5yuzt15hap6",
-  },
-];
-
-type itemProps = {
+type ItemProps = {
   icon: React.ReactNode;
   text: string;
   to?: string;
@@ -32,13 +9,14 @@ type itemProps = {
 
 type Props = {
   className?: string;
+  topMenu: ItemProps[];
 };
 
-const TopMenuComponent: React.FC<Props> = ({ className }) => {
+const TopMenuComponent: React.FC<Props> = ({ className, topMenu }) => {
   return (
     <nav className={className}>
       <ul className="top-menu">
-        {topMenu.map((item: itemProps) => (
+        {topMenu.map((item: ItemProps) => (
           <li key={item.text}>
             {item.to ? (
               <a href={item.to} className="top-menu__link">

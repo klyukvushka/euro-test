@@ -20,11 +20,15 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #ffffff;
   }
 
-  a, .link {
+  a {
     font-size: 16px;
     line-height: 24px;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  p {
+    margin: 0
   }
 
   ul {
