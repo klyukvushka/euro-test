@@ -44,7 +44,7 @@ export const Review = styled(ReviewComponent)`
   .review-text {
     font-size: 18px;
     line-height: 25px;
-    margin-bottom: 58px;
+    margin-bottom: 48px;
   }
   .review-author {
     display: flex;

@@ -80,8 +80,8 @@ export const Carousel = styled(CarouselComponent)`
       margin: 0 40px 0 0;
       button {
         &:before {
-          font-size: 13px;
-          top: -4px;
+          font-size: 11px;
+          top: -5px;
           color: #005fa3;
           opacity: 0.4;
         }

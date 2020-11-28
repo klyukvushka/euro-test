@@ -41,19 +41,19 @@ const AboutSectionComponent: React.FC<Props> = ({ className }) => {
 };
 
 export const AboutSection = styled(AboutSectionComponent)`
-  padding: 140px 0 110px 0;
+  padding: 137px 0 105px 0;
   .text {
-    margin-top: 60px;
+    margin-top: 40px;
     width: 445px;
   }
   .container {
     display: flex;
   }
   .cases {
-    margin-left: 125px;
+    margin-left: 117px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 46px;
+    padding-top: 24px;
   }
 `;

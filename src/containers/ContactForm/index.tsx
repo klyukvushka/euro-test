@@ -88,7 +88,7 @@ const ContactFormComponent: React.FC<Props> = ({
 
 export const ContactForm = styled(ContactFormComponent)`
   width: 540px;
-  padding-top: 20px;
+  padding-top: 14px;
   .form-row {
     display: flex;
     justify-content: space-between;
@@ -102,6 +102,6 @@ export const ContactForm = styled(ContactFormComponent)`
 
   .form-button {
     margin-left: auto;
-    margin-top: 50px;
+    margin-top: 42px;
   }
 `;

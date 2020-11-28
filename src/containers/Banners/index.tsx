@@ -51,7 +51,7 @@ export const Banners = styled(BannersComponent)`
   .slick-dots {
     text-align: center;
     bottom: 103px;
-    left: -484px;
+    left: -482px;
     li button {
       &:before {
         font-size: 13px;
@@ -64,12 +64,13 @@ export const Banners = styled(BannersComponent)`
   .slide-title {
     color: #fff;
     max-width: 589px;
-    margin-bottom: 80px;
+    margin-bottom: 62px;
+    font-size: 47px;
   }
   .slide-img {
     display: block;
-    padding-top: 155px;
-    padding-bottom: 238px;
+    padding-top: 163px;
+    padding-bottom: 240px;
     width: 100%;
     height: 100%;
     background-position: center;
@@ -77,13 +78,13 @@ export const Banners = styled(BannersComponent)`
     background-color: rgba(0, 0, 0, 0.6);
   }
   .slick-arrow {
-    bottom: 77px;
+    bottom: 80px;
     background-color: rgba(255, 255, 255, 0.4);
     &.slick-next {
-      right: 20.75%;
+      right: 21.1%;
     }
     &.slick-prev {
-      right: 23.9%;
+      right: 24.3%;
     }
     &.slick-disabled {
       opacity: 1;

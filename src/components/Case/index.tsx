@@ -51,11 +51,12 @@ export const Case = styled(CaseComponent)`
     font-weight: 900;
     line-height: 66px;
     letter-spacing: 0.1em;
-    margin-bottom: 30px;
+    margin-bottom: 17px;
     transition: color 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
   }
   .case-text {
-    font-size: 14px;
+    font-size: 13px;
+    max-width: 130px;
     font-weight: 700;
     line-height: 18px;
     transition: color 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);

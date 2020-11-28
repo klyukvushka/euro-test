@@ -59,10 +59,10 @@ const ClientsSectionComponent: React.FC<Props> = ({ className }) => {
 };
 
 export const ClientsSection = styled(ClientsSectionComponent)`
-  padding: 140px 0 188px 0;
+  padding: 95px 0 204px 0;
   background: ${(props) => props.theme.colors.grey};
   .carousel {
-    margin-top: 80px;
+    margin-top: 65px;
     .slick-slide {
       padding-right: 30px;
     }

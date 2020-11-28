@@ -57,8 +57,8 @@ const ReviewsSectionComponent: React.FC<Props> = ({ className }) => {
 };
 
 export const ReviewsSection = styled(ReviewsSectionComponent)`
-  padding: 140px 0 228px 0;
+  padding: 140px 0 247px 0;
   .reviews-carousel {
-    margin-top: 80px;
+    margin-top: 57px;
   }
 `;

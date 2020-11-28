@@ -17,7 +17,7 @@ type Props = {
 const menu = [
   { name: "главная", to: "/" },
   { name: "услуги", to: "services" },
-  { name: "клиенты", to: "clients" },
+  { name: "кейсы", to: "clients" },
   { name: "о компании", to: "about" },
   { name: "контакты", to: "contacts" },
 ];
@@ -59,7 +59,7 @@ const HeaderComponent: React.FC<Props> = ({ className }) => {
 };
 
 export const Header = styled(HeaderComponent)`
-  padding: 22px 0 31px 0;
+  padding: 22px 0 29px 0;
   .header-container {
     display: flex;
     justify-content: space-between;

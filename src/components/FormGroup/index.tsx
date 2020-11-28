@@ -12,7 +12,7 @@ export const Error = styled.div`
 `;
 
 const FormGroupStyled = styled.div<{ error?: string; required?: boolean }>`
-  margin-bottom: 35px;
+  margin-bottom: 32px;
   position: relative;
 `;
 

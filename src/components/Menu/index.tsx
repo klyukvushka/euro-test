@@ -35,7 +35,7 @@ export const Menu = styled(MenuComponent)`
   .bottom-menu {
     display: flex;
     li {
-      margin-right: 68px;
+      margin-right: 65px;
       &:last-child {
         margin-right: 0;
       }

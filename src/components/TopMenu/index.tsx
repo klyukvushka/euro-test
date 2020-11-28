@@ -39,11 +39,12 @@ const TopMenuComponent: React.FC<Props> = ({ className, topMenu }) => {
 export const TopMenu = styled(TopMenuComponent)`
   .top-menu {
     display: flex;
-    margin-bottom: 22px;
+    margin-bottom: 16px;
+    justify-content: flex-end;
     li {
       display: inline-flex;
       align-items: center;
-      margin-right: 44px;
+      margin-right: 41px;
       &:last-child {
         margin-right: 0;
       }

@@ -6,16 +6,17 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1140px;
   position: relative;
-  padding: 0 15px;
+  padding: 0 20px;
   margin: 0 auto;
 `;
 
 export const H2 = styled.h2`
   margin-top: 0;
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 33px;
-  margin-bottom: 40px;
+  margin-bottom: 27px;
+  letter-spacing: 1.3px;
   color: ${(props) => props.theme.colors.title};
 `;
 
@@ -34,7 +35,7 @@ export const Subtitle = styled.p`
 export const InputStyled = css`
   background-color: transparent;
   width: 100%;
-  padding: 15px 0;
+  padding: 7px 0;
   color: ${(props) => props.theme.colors.title};
   border: none;
   border-bottom: 1px solid #ffffff;

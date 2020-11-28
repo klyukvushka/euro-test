@@ -25,7 +25,7 @@ export const Spec = styled(SpecComponent)`
   height: 360px;
   margin-bottom: 30px;
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 700;
   line-height: 30px;
   color: #fff;
   position: relative;

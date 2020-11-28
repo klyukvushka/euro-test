@@ -33,9 +33,9 @@ const SpecialSectionComponent: React.FC<Props> = ({ className }) => {
 
 export const SpecialSection = styled(SpecialSectionComponent)`
   background: ${(props) => props.theme.colors.grey};
-  padding: 140px 0 110px 0;
+  padding: 137px 0 101px 0;
   .services {
-    margin-top: 80px;
+    margin-top: 83px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
