@@ -39,11 +39,12 @@ const ContactsComponent: React.FC<Props> = ({ className }) => {
 };
 
 export const Contacts = styled(ContactsComponent)`
-  padding: 122px 0 140px 0;
+  padding: 106px 0 140px 0;
   color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
   background-image: url(${con});
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   .contacts-subtitle {
     color: #fff;
   }

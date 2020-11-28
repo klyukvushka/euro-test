@@ -29,6 +29,8 @@ export const Button = styled(ButtonComponent)`
   height: 60px;
   border: none;
   cursor: pointer;
+  max-width: 270px;
+  width: 100%;
   &:hover {
     background-color: #04538c;
   }

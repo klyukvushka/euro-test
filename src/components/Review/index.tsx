@@ -1,6 +1,13 @@
 import React from "react";
 import { styled } from "../../config/theme";
 
+export type ReviewType = {
+  name: string;
+  text: string;
+  role: string;
+  avatar: string;
+};
+
 type Props = {
   className?: string;
   name: string;
@@ -39,10 +46,15 @@ export const Review = styled(ReviewComponent)`
     line-height: 25px;
     margin-bottom: 58px;
   }
+  .review-author {
+    display: flex;
+    align-items: center;
+  }
   .review-avatar {
     width: 80px;
     height: 80px;
     border-radius: 100%;
+    margin-right: 35px;
   }
   .review-name {
     font-weight: 900;

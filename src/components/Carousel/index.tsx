@@ -5,10 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import { styled } from "../../config/theme";
 import { ArrowIcon } from "../Icons";
 
-type Props = {
-  className?: string;
-};
-
 const SlideButton = styled.button`
   display: inline-block;
   width: 60px;
@@ -18,8 +14,18 @@ const SlideButton = styled.button`
   border-radius: 0;
   padding: 22px;
   text-align: center;
+  z-index: 5;
+  top: auto;
+  bottom: -139px;
   &:before {
     display: none;
+  }
+  &:hover,
+  &:focus {
+    background-color: #04538c;
+  }
+  &:active {
+    background-color: #034473;
   }
 `;
 
@@ -35,33 +41,31 @@ const NextArrow = (props: CustomArrowProps) => {
 const PrevArrow = (props: CustomArrowProps) => {
   const { className, onClick } = props;
   return (
-    <SlideButton className={className} onClick={onClick}>
+    <SlideButton className={className} onClick={onClick} style={{}}>
       <ArrowIcon style={{ transform: "rotate(180deg)" }} />
     </SlideButton>
   );
 };
 
-const CarouselComponent: React.FC<Props> = ({ className }) => {
+type Props = {
+  className?: string;
+  children: React.ReactNode;
+  slide?: number;
+};
+
+const CarouselComponent: React.FC<Props> = ({ className, children, slide }) => {
   const settings = {
     dots: true,
     arrows: true,
+    infinite: false,
     speed: 500,
-    slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
   return (
-    <Slider {...settings} className={className}>
-      <div>
-        <h3>1</h3>
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
+    <Slider {...settings} slidesToShow={slide || 1} className={className}>
+      {children}
     </Slider>
   );
 };
@@ -69,13 +73,14 @@ const CarouselComponent: React.FC<Props> = ({ className }) => {
 export const Carousel = styled(CarouselComponent)`
   .slick-dots {
     text-align: left;
+    bottom: -113px;
     li {
       width: 10px;
       height: 10px;
       margin: 0 40px 0 0;
       button {
         &:before {
-          font-size: 10px;
+          font-size: 13px;
           top: -4px;
           color: #005fa3;
           opacity: 0.4;
@@ -85,5 +90,16 @@ export const Carousel = styled(CarouselComponent)`
   }
   .slick-dots li.slick-active button:before {
     opacity: 1;
+  }
+  .slick-next {
+    right: 0;
+  }
+  .slick-prev {
+    left: auto;
+    right: 60px;
+  }
+  .slick-disabled {
+    opacity: 0.2;
+    pointer-events: none;
   }
 `;

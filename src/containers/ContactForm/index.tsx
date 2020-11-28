@@ -104,7 +104,6 @@ export const ContactForm = styled(ContactFormComponent)`
   }
   .form-button {
     margin-left: auto;
-    width: 270px;
     margin-top: 50px;
   }
 `;
