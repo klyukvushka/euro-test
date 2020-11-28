@@ -14,7 +14,13 @@ import {
 type Props = {
   className?: string;
 };
-const menu = ["главная", "услуги", "кейсы", "о компании", " контакты"];
+const menu = [
+  { name: "главная", to: "/" },
+  { name: "услуги", to: "services" },
+  { name: "клиенты", to: "clients" },
+  { name: "о компании", to: "about" },
+  { name: "контакты", to: "contacts" },
+];
 
 const topMenu = [
   {

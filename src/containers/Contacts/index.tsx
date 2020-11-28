@@ -11,7 +11,7 @@ type Props = {
 
 const ContactsComponent: React.FC<Props> = ({ className }) => {
   return (
-    <section className={className}>
+    <section className={className} id="contacts">
       <Container className="container">
         <div className="wrapper">
           <Subtitle className="contacts-subtitle">Связь с нами</Subtitle>

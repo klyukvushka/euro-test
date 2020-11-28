@@ -13,7 +13,7 @@ const H1 = styled(H2).attrs({
 
 const SpecialSectionComponent: React.FC<Props> = ({ className }) => {
   return (
-    <section className={className}>
+    <section className={className} id="services">
       <Container>
         <H1>Наши услуги</H1>
         <Subtitle>Мы специализируемся</Subtitle>

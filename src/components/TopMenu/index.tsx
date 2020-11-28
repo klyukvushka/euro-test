@@ -14,7 +14,7 @@ type Props = {
 
 const TopMenuComponent: React.FC<Props> = ({ className, topMenu }) => {
   return (
-    <nav className={className}>
+    <div className={className}>
       <ul className="top-menu">
         {topMenu.map((item: ItemProps) => (
           <li key={item.text}>
@@ -32,7 +32,7 @@ const TopMenuComponent: React.FC<Props> = ({ className, topMenu }) => {
           </li>
         ))}
       </ul>
-    </nav>
+    </div>
   );
 };
 

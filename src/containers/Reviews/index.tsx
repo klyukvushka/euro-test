@@ -35,7 +35,7 @@ const fakeReview = [
 
 const ReviewsSectionComponent: React.FC<Props> = ({ className }) => {
   return (
-    <section className={className}>
+    <section className={className} id="reviews">
       <Container>
         <H2>Отзывы</H2>
         <Subtitle>Ваши благодарности</Subtitle>

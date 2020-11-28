@@ -9,7 +9,7 @@ type Props = {
 
 const AboutSectionComponent: React.FC<Props> = ({ className }) => {
   return (
-    <section className={className}>
+    <section className={className} id="about">
       <Container className="container">
         <div className="text-wrapper">
           <H2>О нас</H2>

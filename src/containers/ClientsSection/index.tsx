@@ -43,7 +43,7 @@ const fakedata = [
 
 const ClientsSectionComponent: React.FC<Props> = ({ className }) => {
   return (
-    <section className={className}>
+    <section className={className} id="clients">
       <Container>
         <H2>Наши клиенты</H2>
         <Subtitle>С нами работают</Subtitle>

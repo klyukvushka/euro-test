@@ -1,20 +1,29 @@
 import React from "react";
 import { styled } from "../../config/theme";
+import { Link } from "react-scroll";
+
+type MenuItemProps = { name: string; to: string };
 
 type Props = {
   className?: string;
-  menu: string[];
+  menu: MenuItemProps[];
 };
 
 const MenuComponent: React.FC<Props> = ({ className, menu }) => {
   return (
     <nav className={className}>
       <ul className="bottom-menu">
-        {menu.map((item: string) => (
-          <li key={item}>
-            <a href="http://" className="bottom-menu__link">
-              {item}
-            </a>
+        {menu.map((item: MenuItemProps) => (
+          <li key={item.name}>
+            <Link
+              to={item.to}
+              smooth={true}
+              offset={0}
+              duration={2000}
+              className="bottom-menu__link"
+            >
+              {item.name}
+            </Link>
           </li>
         ))}
       </ul>
