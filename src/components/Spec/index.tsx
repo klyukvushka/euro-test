@@ -8,7 +8,11 @@ type Props = {
 };
 
 const SpecComponent: React.FC<Props> = ({ className, text }) => {
-  return <div className={className}>{text}</div>;
+  return (
+    <div className={className}>
+      <span>{text}</span>
+    </div>
+  );
 };
 
 export const Spec = styled(SpecComponent)`
@@ -20,17 +24,29 @@ export const Spec = styled(SpecComponent)`
   width: 350px;
   height: 360px;
   margin-bottom: 30px;
-  transition: background-color cubic-bezier(0.075, 0.82, 0.165, 1);
   font-size: 24px;
   font-weight: 900;
   line-height: 30px;
   color: #fff;
+  position: relative;
+  span {
+    position: relative;
+    z-index: 1;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
   &:hover {
-    background-image: linear-gradient(
-        0deg,
-        rgba(0, 95, 163, 0.65),
-        rgba(0, 95, 163, 0.65)
-      ),
-      url(${house});
+    &:before {
+      background-color: rgba(0, 95, 163, 0.65);
+    }
   }
 `;

@@ -6,8 +6,9 @@ export const Error = styled.div`
   font-size: 14px;
   font-weight: 500;
   padding-left: 5px;
-  padding-top: 5px;
   color: #ff0000;
+  position: absolute;
+  bottom: -25px;
 `;
 
 const FormGroupStyled = styled.div<{ error?: string; required?: boolean }>`

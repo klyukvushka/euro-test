@@ -45,6 +45,7 @@ export const Contacts = styled(ContactsComponent)`
   background-image: url(${con});
   background-repeat: no-repeat;
   background-position: top;
+  background-size: cover;
   .contacts-subtitle {
     color: #fff;
   }

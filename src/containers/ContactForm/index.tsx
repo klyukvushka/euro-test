@@ -28,9 +28,11 @@ const ContactFormComponent: React.FC<Props> = ({
       validationSchema={Yup.object().shape({
         firstName: Yup.string()
           .max(20, "Слишком длинное имя")
+          .matches(/^[a-zа-яё]+$/i, "Имя не должно содержать цифры")
           .required("Введите имя"),
         lastName: Yup.string()
           .max(20, "Слишком длинная фамилия")
+          .matches(/^[a-zа-яё]+$/i, "Фамилия не должна содержать цифры")
           .required("Введите фамилию"),
         text: Yup.string()
           .max(100, "Слишком длинное сообщение")
@@ -38,11 +40,6 @@ const ContactFormComponent: React.FC<Props> = ({
       })}
       onSubmit={(values) => {
         console.log(values);
-        // onSubmit({
-        //   firstName: values.firstName,
-        //   lastName: values.lastName,
-        //   text: values.text,
-        // });
       }}
     >
       {(props: any) => {
@@ -98,10 +95,11 @@ export const ContactForm = styled(ContactFormComponent)`
     border: none;
     padding: 0;
     margin: 0;
+    .form-group {
+      width: 255px;
+    }
   }
-  .form-group {
-    width: 255px;
-  }
+
   .form-button {
     margin-left: auto;
     margin-top: 50px;

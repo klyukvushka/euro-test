@@ -35,7 +35,7 @@ export const Case = styled(CaseComponent)`
   width: 255px;
   height: 255px;
   margin-bottom: 30px;
-  transition: background-color cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: background-color 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
   &:hover {
     background-color: ${(props) => props.theme.colors.blue};
     div,
@@ -52,13 +52,13 @@ export const Case = styled(CaseComponent)`
     line-height: 66px;
     letter-spacing: 0.1em;
     margin-bottom: 30px;
-    transition: color cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: color 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
   }
   .case-text {
     font-size: 14px;
     font-weight: 700;
     line-height: 18px;
-    transition: color cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: color 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
   }
   .case-link {
     flex: 0 0 auto;
@@ -67,6 +67,6 @@ export const Case = styled(CaseComponent)`
     line-height: 17px;
     text-decoration: underline;
     color: ${(props) => props.theme.colors.blue};
-    transition: color cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: color 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
   }
 `;

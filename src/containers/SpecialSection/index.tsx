@@ -7,11 +7,15 @@ type Props = {
   className?: string;
 };
 
+const H1 = styled(H2).attrs({
+  as: "h1",
+})``;
+
 const SpecialSectionComponent: React.FC<Props> = ({ className }) => {
   return (
     <section className={className}>
       <Container>
-        <H2>Наши услуги</H2>
+        <H1>Наши услуги</H1>
         <Subtitle>Мы специализируемся</Subtitle>
 
         <div className="services">
