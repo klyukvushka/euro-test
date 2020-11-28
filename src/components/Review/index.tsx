@@ -1,4 +1,5 @@
 import React from "react";
+import { media } from "../../config/media";
 import { styled } from "../../config/theme";
 
 export type ReviewType = {
@@ -41,6 +42,12 @@ export const Review = styled(ReviewComponent)`
   padding: 45px 95px;
   background-color: ${(props) => props.theme.colors.grey};
   color: #000000;
+  ${media.tablet`
+    padding: 35px 50px;
+  `}
+  ${media.phone`
+    padding: 20px;
+  `}
   .review-text {
     font-size: 18px;
     line-height: 25px;

@@ -10,6 +10,7 @@ import {
   PhoneIcon,
   PingIcon,
 } from "../../components/Icons";
+import { media } from "../../config/media";
 
 type Props = {
   className?: string;
@@ -60,11 +61,29 @@ const HeaderComponent: React.FC<Props> = ({ className }) => {
 
 export const Header = styled(HeaderComponent)`
   padding: 22px 0 29px 0;
+  ${media.tabletL`
+    padding: 15px 0;
+  `}
   .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    ${media.tabletL`
+      flex-direction: column;
+  `}
+    ${media.tablet`
+      flex-direction: row;
+  `}
   }
   .menu-block {
+    ${media.tabletL`
+      margin-top: 15px;
+  `}
+    ${media.tablet`
+      display: flex;
+      flex-direction: column-reverse;
+      background-color: #005fa3;
+      padding: 0 30px;
+  `}
   }
 `;

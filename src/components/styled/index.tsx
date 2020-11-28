@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { css } from "styled-components";
-// import { media } from "../../config/media";
+import { media } from "../../config/media";
 
 export const Container = styled.div`
   width: 100%;
@@ -8,6 +8,9 @@ export const Container = styled.div`
   position: relative;
   padding: 0 20px;
   margin: 0 auto;
+  ${media.phone`
+    padding: 0 15px;
+  `}
 `;
 
 export const H2 = styled.h2`
@@ -18,6 +21,10 @@ export const H2 = styled.h2`
   margin-bottom: 27px;
   letter-spacing: 1.3px;
   color: ${(props) => props.theme.colors.title};
+  ${media.phone`
+    font-size: 22px;
+    line-height: 28px;
+  `}
 `;
 
 export const Subtitle = styled.p`
@@ -30,6 +37,14 @@ export const Subtitle = styled.p`
   span {
     color: ${(props) => props.theme.colors.blue};
   }
+  ${media.tabletL`
+    font-size: 40px;
+    line-height: 52px;
+  `}
+  ${media.phone`
+    font-size: 28px;
+    line-height: 30px;
+  `}
 `;
 
 export const InputStyled = css`
@@ -48,6 +63,10 @@ export const InputStyled = css`
     font-size: 21px;
     line-height: 29px;
     color: ${(props) => props.theme.colors.title};
+    ${media.phone`
+    font-size: 16px;
+    line-height: 24px;
+  `}
   }
 `;
 

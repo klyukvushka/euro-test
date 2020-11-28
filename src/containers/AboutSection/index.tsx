@@ -1,6 +1,7 @@
 import React from "react";
 import { Case } from "../../components/Case";
 import { Container, H2, Subtitle } from "../../components/styled";
+import { media } from "../../config/media";
 import { styled } from "../../config/theme";
 
 type Props = {
@@ -42,12 +43,27 @@ const AboutSectionComponent: React.FC<Props> = ({ className }) => {
 
 export const AboutSection = styled(AboutSectionComponent)`
   padding: 137px 0 105px 0;
+  ${media.desktopMini`
+    padding-top: 90px;
+  `}
+  ${media.tabletL`
+    padding: 70px 0;
+  `}
+  ${media.phone`
+    padding: 50px 0;
+  `}
   .text {
     margin-top: 40px;
     width: 445px;
+    ${media.desktopMini`
+      width: 100%;
+  `}
   }
   .container {
     display: flex;
+    ${media.desktopMini`
+      flex-direction: column;
+  `}
   }
   .cases {
     margin-left: 117px;
@@ -55,5 +71,14 @@ export const AboutSection = styled(AboutSectionComponent)`
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 24px;
+    ${media.desktopMini`
+      padding-top: 40px;
+      margin: 0 auto;
+      width: 70%
+  `}
+    ${media.tablet`
+      width: 100%;
+      justify-content: center;
+  `}
   }
 `;

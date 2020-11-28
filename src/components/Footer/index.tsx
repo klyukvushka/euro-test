@@ -1,4 +1,5 @@
 import React from "react";
+import { media } from "../../config/media";
 import { styled } from "../../config/theme";
 import { Container } from "../styled";
 
@@ -22,8 +23,15 @@ export const Footer = styled(FooterComponent)`
   line-height: 19px;
   color: #000;
   padding: 50px 0 40px;
+  ${media.phone`
+      padding: 20px 0;
+  `}
   .container {
     display: flex;
     justify-content: space-between;
+    ${media.phone`
+      flex-direction: column;
+      align-items: center;
+  `}
   }
 `;

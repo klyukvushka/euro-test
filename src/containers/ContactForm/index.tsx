@@ -6,6 +6,7 @@ import { TextArea } from "../../components/TextArea";
 import { Button } from "../../components/Button";
 import { FormGroup } from "../../components/FormGroup";
 import { Input } from "../../components/Input";
+import { media } from "../../config/media";
 
 type InitialFormValues = {
   text: string;
@@ -87,8 +88,12 @@ const ContactFormComponent: React.FC<Props> = ({
 };
 
 export const ContactForm = styled(ContactFormComponent)`
-  width: 540px;
+  max-width: 540px;
+  width: 100%;
   padding-top: 14px;
+  ${media.desktopMini`
+      margin: 0 auto;
+  `}
   .form-row {
     display: flex;
     justify-content: space-between;
@@ -97,11 +102,20 @@ export const ContactForm = styled(ContactFormComponent)`
     margin: 0;
     .form-group {
       width: 255px;
+      ${media.phone`
+      width: 100%;
+      max-width: 320px;
+    `}
     }
+    ${media.phone`
+      flex-direction: column;
+  `}
   }
-
   .form-button {
     margin-left: auto;
     margin-top: 42px;
+    ${media.desktopMini`
+      margin-right: auto;
+  `}
   }
 `;

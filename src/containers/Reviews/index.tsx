@@ -2,6 +2,7 @@ import React from "react";
 import { Carousel } from "../../components/Carousel";
 import { Review, ReviewType } from "../../components/Review";
 import { Container, H2, Subtitle } from "../../components/styled";
+import { media } from "../../config/media";
 import { styled } from "../../config/theme";
 import girl from "../../images/girl.png";
 
@@ -58,6 +59,12 @@ const ReviewsSectionComponent: React.FC<Props> = ({ className }) => {
 
 export const ReviewsSection = styled(ReviewsSectionComponent)`
   padding: 140px 0 247px 0;
+  ${media.desktopMini`
+    padding:  90px 0 227px 0 ;
+  `}
+  ${media.phone`
+    padding: 50px 0 189px 0;
+  `}
   .reviews-carousel {
     margin-top: 57px;
   }

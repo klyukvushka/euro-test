@@ -1,4 +1,5 @@
 import React from "react";
+import { media } from "../../config/media";
 import { styled } from "../../config/theme";
 
 type Props = {
@@ -32,10 +33,15 @@ export const Case = styled(CaseComponent)`
   background-color: ${(props) => props.theme.colors.grey};
   display: flex;
   flex-direction: column;
-  width: 255px;
+  width: 47.4%;
   height: 255px;
   margin-bottom: 30px;
   transition: background-color 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+  ${media.tablet`
+    width: 235px;
+    margin-left: 15px;
+    margin-right: 15px;
+  `}
   &:hover {
     background-color: ${(props) => props.theme.colors.blue};
     div,

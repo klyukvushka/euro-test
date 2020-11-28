@@ -1,6 +1,7 @@
 import React from "react";
 import { MailIcon, PhoneIcon } from "../../components/Icons";
 import { Container, Subtitle } from "../../components/styled";
+import { media } from "../../config/media";
 import { styled } from "../../config/theme";
 import con from "../../images/cont.png";
 import { ContactForm } from "../ContactForm";
@@ -46,12 +47,24 @@ export const Contacts = styled(ContactsComponent)`
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
+  ${media.desktopMini`
+    padding-top: 90px;
+  `}
+  ${media.tabletL`
+    padding: 70px 0;
+  `}
+  ${media.phone`
+    padding: 50px 0;
+  `}
   .contacts-subtitle {
     color: #fff;
   }
   .container {
     display: flex;
     justify-content: space-between;
+    ${media.desktopMini`
+      flex-direction: column;
+  `}
   }
   .text {
     margin-top: 40px;
@@ -60,17 +73,33 @@ export const Contacts = styled(ContactsComponent)`
     font-size: 18px;
     line-height: 25px;
     width: 445px;
-  }
-  .container {
-    display: flex;
+    ${media.desktopMini`
+      width: 100%;
+      text-align: center;
+  `}
+    ${media.phone`
+      margin-bottom: 40px;
+  `}
   }
   .links {
     display: flex;
+    ${media.desktopMini`
+      justify-content: center;
+      margin-bottom: 30px;
+  `}
+    ${media.phone`
+      flex-direction: column;
+      align-items: center;
+  `}
     &__item {
       display: inline-flex;
       align-items: center;
       &:first-child {
         margin-right: 40px;
+        ${media.phone`
+          margin-right: 0;
+          margin-bottom: 15px;
+        `}
       }
       svg {
         path {

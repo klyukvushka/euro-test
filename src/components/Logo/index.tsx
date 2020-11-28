@@ -22,7 +22,7 @@ export const Logo = styled(LogoComponent)`
   font-family: "Merriweather", sans-serif;
   font-weight: 900;
   font-size: 36px;
-  line-height: 49, 78px;
+  line-height: 49px;
   span {
     margin-left: 30px;
   }

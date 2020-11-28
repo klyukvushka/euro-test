@@ -1,9 +1,10 @@
 import React from "react";
-import Slider, { CustomArrowProps } from "react-slick";
+import Slider, { CustomArrowProps, ResponsiveObject } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { styled } from "../../config/theme";
 import { ArrowIcon } from "../Icons";
+import { media } from "../../config/media";
 
 const SlideButton = styled.button`
   display: inline-block;
@@ -17,6 +18,15 @@ const SlideButton = styled.button`
   z-index: 5;
   top: auto;
   bottom: -139px;
+  ${media.tabletL`
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    bottom: -129px;
+  `}
+  ${media.tablet`
+      bottom: -155px;
+  `}
   &:before {
     display: none;
   }
@@ -51,9 +61,15 @@ type Props = {
   className?: string;
   children: React.ReactNode;
   slide?: number;
+  responsive?: ResponsiveObject[];
 };
 
-const CarouselComponent: React.FC<Props> = ({ className, children, slide }) => {
+const CarouselComponent: React.FC<Props> = ({
+  className,
+  children,
+  slide,
+  responsive,
+}) => {
   const settings = {
     dots: true,
     arrows: true,
@@ -62,9 +78,22 @@ const CarouselComponent: React.FC<Props> = ({ className, children, slide }) => {
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
   return (
-    <Slider {...settings} slidesToShow={slide || 1} className={className}>
+    <Slider
+      {...settings}
+      slidesToShow={slide || 1}
+      responsive={responsive}
+      className={className}
+    >
       {children}
     </Slider>
   );
@@ -74,16 +103,26 @@ export const Carousel = styled(CarouselComponent)`
   .slick-dots {
     text-align: left;
     bottom: -113px;
+    ${media.tablet`
+      text-align: center;
+      bottom: -50px;
+  `}
     li {
       width: 10px;
       height: 10px;
       margin: 0 40px 0 0;
+      ${media.tablet`
+      margin-right: 20px;
+     `}
       button {
         &:before {
           font-size: 11px;
           top: -5px;
           color: #005fa3;
           opacity: 0.4;
+          ${media.tablet`
+          font-size: 9px
+          `}
         }
       }
     }
@@ -97,6 +136,12 @@ export const Carousel = styled(CarouselComponent)`
   .slick-prev {
     left: auto;
     right: 60px;
+    ${media.tabletL`
+      right: 50px;
+  `}
+    ${media.tablet`
+      right: auto;
+  `}
   }
   .slick-disabled {
     opacity: 0.2;

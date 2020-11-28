@@ -1,4 +1,5 @@
 import React from "react";
+import { media } from "../../config/media";
 import { styled } from "../../config/theme";
 import house from "../../images/house.png";
 
@@ -21,7 +22,7 @@ export const Spec = styled(SpecComponent)`
   background-size: cover;
   display: flex;
   flex-direction: column-reverse;
-  width: 350px;
+  width: 31.9%;
   height: 360px;
   margin-bottom: 30px;
   font-size: 24px;
@@ -29,6 +30,19 @@ export const Spec = styled(SpecComponent)`
   line-height: 30px;
   color: #fff;
   position: relative;
+  ${media.tabletL`
+    width: 47.9%;
+    font-size: 22px;
+  `}
+  ${media.tablet`
+    height: 340px
+  `}
+    ${media.phone`
+      max-width: 310px;
+      width: 100%;
+      padding: 35px;
+      font-size: 20px;
+  `}
   span {
     position: relative;
     z-index: 1;
