@@ -8,7 +8,7 @@ type Props = {
   text: string;
 };
 
-const SpecComponent: React.FC<Props> = ({ className, text }) => {
+const ServiceComponent: React.FC<Props> = ({ className, text }) => {
   return (
     <div className={className}>
       <span>{text}</span>
@@ -16,7 +16,7 @@ const SpecComponent: React.FC<Props> = ({ className, text }) => {
   );
 };
 
-export const Spec = styled(SpecComponent)`
+export const Service = styled(ServiceComponent)`
   padding: 45px;
   background-image: url(${house});
   background-size: cover;

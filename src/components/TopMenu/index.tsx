@@ -6,6 +6,7 @@ type ItemProps = {
   icon: React.ReactNode;
   text: string;
   to?: string;
+  blank?: boolean;
 };
 
 type Props = {
@@ -20,15 +21,24 @@ const TopMenuComponent: React.FC<Props> = ({ className, topMenu }) => {
         {topMenu.map((item: ItemProps) => (
           <li key={item.text}>
             {item.to ? (
-              <a
-                href={item.to}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="top-menu__link"
-              >
-                {item.icon}
-                <span>{item.text}</span>
-              </a>
+              <>
+                {!item.blank ? (
+                  <a href={item.to} className="top-menu__link">
+                    {item.icon}
+                    <span>{item.text}</span>
+                  </a>
+                ) : (
+                  <a
+                    href={item.to}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="top-menu__link"
+                  >
+                    {item.icon}
+                    <span>{item.text}</span>
+                  </a>
+                )}
+              </>
             ) : (
               <>
                 {item.icon}

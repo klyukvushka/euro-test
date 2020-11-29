@@ -1,10 +1,10 @@
 import React from "react";
-import { Spec } from "../../components/Spec";
-import { Container } from "../../components/ui-components/Container";
-import { H2 } from "../../components/ui-components/Title";
-import { Subtitle } from "../../components/ui-components/Subtitle";
+import { Container } from "../ui-components/Container";
+import { H2 } from "../ui-components/Title";
+import { Subtitle } from "../ui-components/Subtitle";
 import { media } from "../../config/media";
 import { styled } from "../../config/theme";
+import { Service } from "../Service";
 
 type Props = {
   className?: string;
@@ -14,7 +14,7 @@ const H1 = styled(H2).attrs({
   as: "h1",
 })``;
 
-const SpecialSectionComponent: React.FC<Props> = ({ className }) => {
+const ServicesSectionComponent: React.FC<Props> = ({ className }) => {
   return (
     <section className={className} id="services">
       <Container>
@@ -22,19 +22,19 @@ const SpecialSectionComponent: React.FC<Props> = ({ className }) => {
         <Subtitle>Мы специализируемся</Subtitle>
 
         <div className="services">
-          <Spec text="Бухгалтерское обслуживание" />
-          <Spec text="Бухгалтерское обслуживание" />
-          <Spec text="Бухгалтерское обслуживание" />
-          <Spec text="Бухгалтерское обслуживание" />
-          <Spec text="Бухгалтерское обслуживание" />
-          <Spec text="Бухгалтерское обслуживание" />
+          <Service text="Бухгалтерское обслуживание" />
+          <Service text="Бухгалтерское обслуживание" />
+          <Service text="Бухгалтерское обслуживание" />
+          <Service text="Бухгалтерское обслуживание" />
+          <Service text="Бухгалтерское обслуживание" />
+          <Service text="Бухгалтерское обслуживание" />
         </div>
       </Container>
     </section>
   );
 };
 
-export const SpecialSection = styled(SpecialSectionComponent)`
+export const ServicesSection = styled(ServicesSectionComponent)`
   background: ${(props) => props.theme.colors.grey};
   padding: 137px 0 101px 0;
   ${media.desktopSm`

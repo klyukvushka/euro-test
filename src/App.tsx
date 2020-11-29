@@ -6,7 +6,7 @@ import { ClientsSection } from "./components/ClientsSection";
 import { Contacts } from "./components/Contacts";
 import { Header } from "./components/Header";
 import { ReviewsSection } from "./components/Reviews";
-import { SpecialSection } from "./components/SpecialSection";
+import { ServicesSection } from "./components/ServicesSection";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <Header />
       <main>
         <Banners />
-        <SpecialSection />
+        <ServicesSection />
         <AboutSection />
         <ClientsSection />
         <ReviewsSection />

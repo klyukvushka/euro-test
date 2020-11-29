@@ -42,6 +42,7 @@ const topMenu = [
     icon: <PingIcon />,
     text: "Невский пр. 130",
     to: "https://goo.gl/maps/PwHM3K5yuzt15hap6",
+    blank: true,
   },
 ];
 
