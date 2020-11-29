@@ -1,7 +1,7 @@
 import React from "react";
 import { media } from "../../config/media";
 import { styled } from "../../config/theme";
-import { Container } from "../styled";
+import { Container } from "../ui-components/Container";
 
 type Props = {
   className?: string;

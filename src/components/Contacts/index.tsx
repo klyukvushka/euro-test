@@ -41,7 +41,7 @@ const ContactsComponent: React.FC<Props> = ({ className }) => {
 };
 
 export const Contacts = styled(ContactsComponent)`
-  padding: 117px 0 139px 0;
+  padding: 117px 0 137px 0;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.8);
   background-image: url(${con});

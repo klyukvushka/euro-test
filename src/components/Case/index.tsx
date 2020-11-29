@@ -29,7 +29,7 @@ const CaseComponent: React.FC<Props> = ({ className, num, text }) => {
 };
 
 export const Case = styled(CaseComponent)`
-  padding: 30px 40px 40px;
+  padding: 35px 40px 40px;
   background-color: ${(props) => props.theme.colors.grey};
   display: flex;
   flex-direction: column;
@@ -57,11 +57,11 @@ export const Case = styled(CaseComponent)`
     font-weight: 900;
     line-height: 66px;
     letter-spacing: 0.1em;
-    margin-bottom: 17px;
+    margin-bottom: 14px;
     transition: color 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
   }
   .case-text {
-    font-size: 13px;
+    font-size: 14px;
     max-width: 130px;
     font-weight: 700;
     line-height: 18px;

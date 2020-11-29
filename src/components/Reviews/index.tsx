@@ -60,7 +60,7 @@ const ReviewsSectionComponent: React.FC<Props> = ({ className }) => {
 };
 
 export const ReviewsSection = styled(ReviewsSectionComponent)`
-  padding: 140px 0 247px 0;
+  padding: 140px 0 245px 0;
   ${media.desktopSm`
     padding:  90px 0 227px 0 ;
   `}
