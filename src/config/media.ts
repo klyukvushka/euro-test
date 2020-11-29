@@ -1,6 +1,6 @@
-  //@ts-nocheck
-import { css } from 'styled-components';
-import theme from './theme';
+//@ts-nocheck
+import { css } from "styled-components";
+import theme from "./theme";
 
 export const media: any = Object.keys(theme.breakpoints).reduce(
   (acc: { [key: string]: Function }, key) => {

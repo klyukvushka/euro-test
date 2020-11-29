@@ -43,7 +43,7 @@ const ContactFormComponent: React.FC<Props> = ({
         console.log(values);
       }}
     >
-      {(props: any) => {
+      {(props) => {
         const { errors: formikErrors, handleSubmit, touched } = props;
 
         return (
