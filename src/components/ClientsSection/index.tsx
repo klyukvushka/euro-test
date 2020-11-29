@@ -87,12 +87,12 @@ const ClientsSectionComponent: React.FC<Props> = ({ className }) => {
 export const ClientsSection = styled(ClientsSectionComponent)`
   padding: 95px 0 204px 0;
   background: ${(props) => props.theme.colors.grey};
-  ${media.tabletL`
+  ${media.tabletLandscape`
     padding: 70px 0 170px 0;
   `}
   .carousel {
     margin-top: 65px;
-    ${media.tabletL`
+    ${media.tabletLandscape`
       margin-top: 40px;
   `}
     .slick-slide {

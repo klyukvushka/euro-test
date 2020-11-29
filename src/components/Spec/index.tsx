@@ -30,11 +30,11 @@ export const Spec = styled(SpecComponent)`
   line-height: 30px;
   color: #fff;
   position: relative;
-  ${media.tabletL`
+  ${media.tabletLandscape`
     width: 47.9%;
     font-size: 22px;
   `}
-  ${media.tablet`
+  ${media.tabletPortrait`
     height: 340px
   `}
     ${media.phone`

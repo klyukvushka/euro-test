@@ -89,7 +89,7 @@ export const ContactForm = styled(ContactFormComponent)`
   max-width: 540px;
   width: 100%;
   padding-top: 14px;
-  ${media.desktopMini`
+  ${media.desktopSm`
       margin: 0 auto;
   `}
   .form-row {
@@ -112,7 +112,7 @@ export const ContactForm = styled(ContactFormComponent)`
   .form-button {
     margin-left: auto;
     margin-top: 42px;
-    ${media.desktopMini`
+    ${media.desktopSm`
       margin-right: auto;
   `}
   }

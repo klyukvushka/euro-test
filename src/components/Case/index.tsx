@@ -37,7 +37,7 @@ export const Case = styled(CaseComponent)`
   height: 255px;
   margin-bottom: 30px;
   transition: background-color 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
-  ${media.tablet`
+  ${media.tabletPortrait`
     width: 235px;
     margin-left: 15px;
     margin-right: 15px;

@@ -35,18 +35,18 @@ const MenuComponent: React.FC<Props> = ({ className, menu }) => {
 export const Menu = styled(MenuComponent)`
   .bottom-menu {
     display: flex;
-    ${media.tablet`
+    ${media.tabletPortrait`
       flex-direction: column;
   `}
     li {
       margin-right: 65px;
       &:last-child {
         margin-right: 0;
-        ${media.tablet`
+        ${media.tabletPortrait`
         margin-bottom: 10px;
         `}
       }
-      ${media.tablet`
+      ${media.tabletPortrait`
         margin-right: 0;
         padding: 13px 0;
         border-bottom: 1px solid rgba(255,255,255, 0.4);
@@ -61,7 +61,7 @@ export const Menu = styled(MenuComponent)`
       text-transform: uppercase;
       color: ${(props) => props.theme.colors.text};
       transition: text-decoration 0.15s;
-      ${media.tablet`
+      ${media.tabletPortrait`
         color: #fff;
       `}
       &:hover {

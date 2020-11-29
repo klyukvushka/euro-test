@@ -11,7 +11,7 @@ export const Subtitle = styled.p`
   span {
     color: ${(props) => props.theme.colors.blue};
   }
-  ${media.tabletL`
+  ${media.tabletLandscape`
     font-size: 40px;
     line-height: 52px;
   `}

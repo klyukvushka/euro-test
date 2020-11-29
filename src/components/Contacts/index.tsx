@@ -48,10 +48,10 @@ export const Contacts = styled(ContactsComponent)`
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  ${media.desktopMini`
+  ${media.desktopSm`
     padding-top: 90px;
   `}
-  ${media.tabletL`
+  ${media.tabletLandscape`
     padding: 70px 0;
   `}
   ${media.phone`
@@ -63,7 +63,7 @@ export const Contacts = styled(ContactsComponent)`
   .container {
     display: flex;
     justify-content: space-between;
-    ${media.desktopMini`
+    ${media.desktopSm`
       flex-direction: column;
   `}
   }
@@ -74,7 +74,7 @@ export const Contacts = styled(ContactsComponent)`
     font-size: 18px;
     line-height: 25px;
     width: 445px;
-    ${media.desktopMini`
+    ${media.desktopSm`
       width: 100%;
       text-align: center;
   `}
@@ -84,7 +84,7 @@ export const Contacts = styled(ContactsComponent)`
   }
   .links {
     display: flex;
-    ${media.desktopMini`
+    ${media.desktopSm`
       justify-content: center;
       margin-bottom: 30px;
   `}

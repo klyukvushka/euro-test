@@ -18,13 +18,13 @@ const SlideButton = styled.button`
   z-index: 5;
   top: auto;
   bottom: -139px;
-  ${media.tabletL`
+  ${media.tabletLandscape`
     width: 50px;
     height: 50px;
     padding: 15px;
     bottom: -129px;
   `}
-  ${media.tablet`
+  ${media.tabletPortrait`
       bottom: -155px;
   `}
   &:before {
@@ -103,7 +103,7 @@ export const Carousel = styled(CarouselComponent)`
   .slick-dots {
     text-align: left;
     bottom: -113px;
-    ${media.tablet`
+    ${media.tabletPortrait`
       text-align: center;
       bottom: -50px;
   `}
@@ -111,7 +111,7 @@ export const Carousel = styled(CarouselComponent)`
       width: 10px;
       height: 10px;
       margin: 0 40px 0 0;
-      ${media.tablet`
+      ${media.tabletPortrait`
       margin-right: 20px;
      `}
       button {
@@ -120,7 +120,7 @@ export const Carousel = styled(CarouselComponent)`
           top: -5px;
           color: #005fa3;
           opacity: 0.4;
-          ${media.tablet`
+          ${media.tabletPortrait`
           font-size: 9px
           `}
         }
@@ -136,10 +136,10 @@ export const Carousel = styled(CarouselComponent)`
   .slick-prev {
     left: auto;
     right: 60px;
-    ${media.tabletL`
+    ${media.tabletLandscape`
       right: 50px;
   `}
-    ${media.tablet`
+    ${media.tabletPortrait`
       right: auto;
   `}
   }

@@ -42,7 +42,7 @@ export const TopMenu = styled(TopMenuComponent)`
     display: flex;
     margin-bottom: 16px;
     justify-content: flex-end;
-    ${media.tablet`
+    ${media.tabletPortrait`
       display: flex;
       flex-direction: column;
   `}
@@ -54,11 +54,11 @@ export const TopMenu = styled(TopMenuComponent)`
         margin-right: 0;
       }
       svg path {
-        ${media.tablet`
+        ${media.tabletPortrait`
           fill: #fff;
       `}
       }
-      ${media.tablet`
+      ${media.tabletPortrait`
         margin-right: 0;
         padding: 7px 0;
       `}
@@ -68,7 +68,7 @@ export const TopMenu = styled(TopMenuComponent)`
         font-weight: 400;
         line-height: 17px;
         color: #000;
-        ${media.tablet`
+        ${media.tabletPortrait`
           font-size: 15px;
         color: #fff;
     

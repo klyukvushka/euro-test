@@ -42,7 +42,7 @@ export const Review = styled(ReviewComponent)`
   padding: 45px 95px;
   background-color: ${(props) => props.theme.colors.grey};
   color: #000000;
-  ${media.tablet`
+  ${media.tabletPortrait`
     padding: 35px 50px;
   `}
   ${media.phone`

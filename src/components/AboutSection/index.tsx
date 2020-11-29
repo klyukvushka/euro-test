@@ -45,10 +45,10 @@ const AboutSectionComponent: React.FC<Props> = ({ className }) => {
 
 export const AboutSection = styled(AboutSectionComponent)`
   padding: 137px 0 105px 0;
-  ${media.desktopMini`
+  ${media.desktopSm`
     padding-top: 90px;
   `}
-  ${media.tabletL`
+  ${media.tabletLandscape`
     padding: 70px 0;
   `}
   ${media.phone`
@@ -57,13 +57,13 @@ export const AboutSection = styled(AboutSectionComponent)`
   .text {
     margin-top: 40px;
     width: 445px;
-    ${media.desktopMini`
+    ${media.desktopSm`
       width: 100%;
   `}
   }
   .container {
     display: flex;
-    ${media.desktopMini`
+    ${media.desktopSm`
       flex-direction: column;
   `}
   }
@@ -73,12 +73,12 @@ export const AboutSection = styled(AboutSectionComponent)`
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 24px;
-    ${media.desktopMini`
+    ${media.desktopSm`
       padding-top: 40px;
       margin: 0 auto;
       width: 70%
   `}
-    ${media.tablet`
+    ${media.tabletPortrait`
       width: 100%;
       justify-content: center;
   `}

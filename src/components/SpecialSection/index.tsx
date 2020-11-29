@@ -37,10 +37,10 @@ const SpecialSectionComponent: React.FC<Props> = ({ className }) => {
 export const SpecialSection = styled(SpecialSectionComponent)`
   background: ${(props) => props.theme.colors.grey};
   padding: 137px 0 101px 0;
-  ${media.desktopMini`
+  ${media.desktopSm`
     padding-top: 90px;
   `}
-  ${media.tabletL`
+  ${media.tabletLandscape`
     padding: 70px 0;
   `}
     ${media.phone`
@@ -51,12 +51,12 @@ export const SpecialSection = styled(SpecialSectionComponent)`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    ${media.tabletL`
+    ${media.tabletLandscape`
       margin: 0 auto;
       margin-top: 40px;
       width: 70%;
   `}
-    ${media.tablet`
+    ${media.tabletPortrait`
       width: 100%;
       align-items: center;
       justify-content: center;

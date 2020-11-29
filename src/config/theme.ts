@@ -2,9 +2,9 @@ import baseStyled, { ThemedStyledInterface } from 'styled-components';
 
 const theme: { [key: string]: any } = {
   breakpoints: {
-    desktopMini: '1070px',
-    tabletL: "992px",
-    tablet: "768px",
+    desktopSm: '1070px',
+    tabletLandscape: "992px",
+    tabletPortrait: "768px",
     phone: "480px"
   },
   colors: {
