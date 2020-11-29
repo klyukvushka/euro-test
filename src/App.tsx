@@ -1,12 +1,12 @@
 import React from "react";
+import { AboutSection } from "./components/AboutSection";
 import { Footer } from "./components/Footer";
-import { AboutSection } from "./containers/AboutSection";
-import { Banners } from "./containers/Banners";
-import { ClientsSection } from "./containers/ClientsSection";
-import { Contacts } from "./containers/Contacts";
-import { Header } from "./containers/Header";
-import { ReviewsSection } from "./containers/Reviews";
-import { SpecialSection } from "./containers/SpecialSection";
+import { Banners } from "./components/Banners";
+import { ClientsSection } from "./components/ClientsSection";
+import { Contacts } from "./components/Contacts";
+import { Header } from "./components/Header";
+import { ReviewsSection } from "./components/Reviews";
+import { SpecialSection } from "./components/SpecialSection";
 
 function App() {
   return (

@@ -2,10 +2,10 @@ import React from "react";
 import * as Yup from "yup";
 import { styled } from "../../config/theme";
 import { Formik } from "formik";
-import { TextArea } from "../../components/TextArea";
-import { Button } from "../../components/Button";
-import { FormGroup } from "../../components/FormGroup";
-import { Input } from "../../components/Input";
+import { TextArea } from "../../components/ui-components/TextArea";
+import { Button } from "../../components/ui-components/Button";
+import { FormGroup } from "../../components/ui-components/FormGroup";
+import { Input } from "../../components/ui-components/Input";
 import { media } from "../../config/media";
 
 type InitialFormValues = {
@@ -75,11 +75,9 @@ const ContactFormComponent: React.FC<Props> = ({
               />
             </FormGroup>
 
-            <Button
-              type="submit"
-              text="Отправить сообщение"
-              className="form-button"
-            />
+            <Button type="submit" className="form-button">
+              Отправить сообщение
+            </Button>
           </form>
         );
       }}

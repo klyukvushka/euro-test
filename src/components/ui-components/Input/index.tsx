@@ -1,7 +1,8 @@
 import React from "react";
-import { styled } from "../../config/theme";
+import { styled } from "../../../config/theme";
 import { Field, FieldProps } from "formik";
-import { InputStyled, Label } from "../styled";
+import { InputStyled } from "../../styled";
+import { Label } from "../Label";
 
 interface Props {
   className?: string;

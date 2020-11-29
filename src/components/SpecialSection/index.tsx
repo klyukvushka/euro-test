@@ -1,6 +1,8 @@
 import React from "react";
 import { Spec } from "../../components/Spec";
-import { Container, H2, Subtitle } from "../../components/styled";
+import { Container } from "../../components/ui-components/Container";
+import { H2 } from "../../components/ui-components/Title";
+import { Subtitle } from "../../components/ui-components/Subtitle";
 import { media } from "../../config/media";
 import { styled } from "../../config/theme";
 
@@ -57,6 +59,7 @@ export const SpecialSection = styled(SpecialSectionComponent)`
     ${media.tablet`
       width: 100%;
       align-items: center;
+      justify-content: center;
   `}
   }
 `;

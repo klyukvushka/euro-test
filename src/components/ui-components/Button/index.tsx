@@ -1,21 +1,6 @@
-import React from "react";
-import { styled } from "../../config/theme";
+import { styled } from "../../../config/theme";
 
-type Props = {
-  className?: string;
-  text: string;
-  type: "submit" | "button";
-};
-
-const ButtonComponent: React.FC<Props> = ({ className, text, type }) => {
-  return (
-    <button type={type} className={className}>
-      {text}
-    </button>
-  );
-};
-
-export const Button = styled(ButtonComponent)`
+export const Button = styled.button`
   padding: 19px 18px;
   background-color: ${(props) => props.theme.colors.blue};
   display: block;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Logo } from "../../components/Logo";
 import { Menu } from "../../components/Menu";
-import { Container } from "../../components/styled";
+import { Container } from "../../components/ui-components/Container";
 import { TopMenu } from "../../components/TopMenu";
 import { styled } from "../../config/theme";
 import {
@@ -9,7 +9,7 @@ import {
   MailIcon,
   PhoneIcon,
   PingIcon,
-} from "../../components/Icons";
+} from "../../components/ui-components/Icons";
 import { media } from "../../config/media";
 
 type Props = {

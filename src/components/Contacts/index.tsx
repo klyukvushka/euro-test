@@ -1,6 +1,7 @@
 import React from "react";
-import { MailIcon, PhoneIcon } from "../../components/Icons";
-import { Container, Subtitle } from "../../components/styled";
+import { MailIcon, PhoneIcon } from "../../components/ui-components/Icons";
+import { Container } from "../../components/ui-components/Container";
+import { Subtitle } from "../../components/ui-components/Subtitle";
 import { media } from "../../config/media";
 import { styled } from "../../config/theme";
 import con from "../../images/cont.png";

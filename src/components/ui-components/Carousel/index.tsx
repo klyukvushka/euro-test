@@ -2,9 +2,9 @@ import React from "react";
 import Slider, { CustomArrowProps, ResponsiveObject } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { styled } from "../../config/theme";
+import { styled } from "../../../config/theme";
 import { ArrowIcon } from "../Icons";
-import { media } from "../../config/media";
+import { media } from "../../../config/media";
 
 const SlideButton = styled.button`
   display: inline-block;

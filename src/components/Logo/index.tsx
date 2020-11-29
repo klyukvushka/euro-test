@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "../../config/theme";
-import { LogoIcon } from "../Icons";
+import { LogoIcon } from "../ui-components/Icons";
 
 type Props = {
   className?: string;

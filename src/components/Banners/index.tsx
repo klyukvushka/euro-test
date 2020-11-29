@@ -1,7 +1,8 @@
 import React from "react";
-import { Button } from "../../components/Button";
-import { Carousel } from "../../components/Carousel";
-import { Container, Subtitle } from "../../components/styled";
+import { Button } from "../../components/ui-components/Button";
+import { Carousel } from "../../components/ui-components/Carousel";
+import { Container } from "../../components/ui-components/Container";
+import { Subtitle } from "../../components/ui-components/Subtitle";
 import { styled } from "../../config/theme";
 import slide from "../../images/slide.jpg";
 
@@ -38,7 +39,7 @@ const BannersComponent: React.FC<Props> = ({ className }) => {
           >
             <Container key={item.id}>
               <Subtitle className="slide-title">{item.title}</Subtitle>
-              <Button type="button" text="Наша презентация" />
+              <Button type="button">Наша перезентация</Button>
             </Container>
           </div>
         </div>

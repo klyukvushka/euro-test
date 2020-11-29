@@ -1,6 +1,8 @@
 import React from "react";
 import { Case } from "../../components/Case";
-import { Container, H2, Subtitle } from "../../components/styled";
+import { Container } from "../../components/ui-components/Container";
+import { H2 } from "../../components/ui-components/Title";
+import { Subtitle } from "../../components/ui-components/Subtitle";
 import { media } from "../../config/media";
 import { styled } from "../../config/theme";
 
