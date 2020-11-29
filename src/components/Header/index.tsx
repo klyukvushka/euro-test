@@ -79,6 +79,7 @@ const HeaderComponent: React.FC<Props> = ({ className }) => {
           <div className="header-mobile__item header-mobile__item_two"></div>
           <div className="header-mobile__item header-mobile__item_three"></div>
         </div>
+
         <div className={isToggled ? "menu-block active" : "menu-block"}>
           <TopMenu topMenu={topMenu} />
           <Menu menu={menu} clickHandler={closeMenu} />

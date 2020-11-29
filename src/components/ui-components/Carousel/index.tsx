@@ -118,6 +118,7 @@ export const Carousel = styled(CarouselComponent)`
         &:before {
           font-size: 11px;
           top: -5px;
+          left: -6px;
           color: #005fa3;
           opacity: 0.4;
           ${media.tabletPortrait`

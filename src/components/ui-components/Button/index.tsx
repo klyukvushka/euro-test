@@ -18,6 +18,8 @@ export const Button = styled.button`
   width: 270px;
   ${media.phone`
       width: 240px;
+      height: 50px;
+      padding: 13px 18px;
   `}
   &:hover {
     background-color: #04538c;

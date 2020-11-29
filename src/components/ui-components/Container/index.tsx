@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import { css } from "styled-components";
 import { media } from "../../../config/media";
+import { styled } from "../../../config/theme";
 
-export const Container = styled.div`
+export const Content = css`
   width: 100%;
   max-width: 1140px;
   position: relative;
@@ -10,4 +11,8 @@ export const Container = styled.div`
   ${media.phone`
     padding: 0 15px;
   `}
+`;
+
+export const Container = styled.div`
+  ${Content}
 `;

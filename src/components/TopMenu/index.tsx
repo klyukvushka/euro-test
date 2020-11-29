@@ -20,7 +20,12 @@ const TopMenuComponent: React.FC<Props> = ({ className, topMenu }) => {
         {topMenu.map((item: ItemProps) => (
           <li key={item.text}>
             {item.to ? (
-              <a href={item.to} className="top-menu__link">
+              <a
+                href={item.to}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="top-menu__link"
+              >
                 {item.icon}
                 <span>{item.text}</span>
               </a>

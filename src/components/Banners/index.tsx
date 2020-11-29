@@ -1,8 +1,9 @@
 import React from "react";
 import { Button } from "../../components/ui-components/Button";
 import { Carousel } from "../../components/ui-components/Carousel";
-import { Container } from "../../components/ui-components/Container";
+import { Container, Content } from "../../components/ui-components/Container";
 import { Subtitle } from "../../components/ui-components/Subtitle";
+import { media } from "../../config/media";
 import { styled } from "../../config/theme";
 import slide from "../../images/slide.jpg";
 
@@ -49,14 +50,15 @@ const BannersComponent: React.FC<Props> = ({ className }) => {
 };
 
 export const Banners = styled(BannersComponent)`
+  margin-bottom: -24px;
   .slick-dots {
-    text-align: center;
-    bottom: 103px;
-    left: -482px;
+    ${Content};
+    bottom: 128px;
+    ${media.tabletPortrait`
+        bottom: 180px;
+      `}
     li button {
       &:before {
-        font-size: 13px;
-        top: -4px;
         color: #fff;
         opacity: 0.4;
       }
@@ -78,13 +80,27 @@ export const Banners = styled(BannersComponent)`
     background-color: rgba(0, 0, 0, 0.6);
   }
   .slick-arrow {
-    bottom: 80px;
+    bottom: 105px;
     background-color: rgba(255, 255, 255, 0.4);
+    ${media.tabletPortrait`
+        bottom: 90px;
+      `}
     &.slick-next {
-      right: 21.1%;
+      right: calc(24.3% - 60px);
+      ${media.tabletLandscape`
+        right: calc(24.3% - 50px);
+      `}
+      ${media.tabletPortrait`
+        right: 20px;
+      `}
     }
     &.slick-prev {
       right: 24.3%;
+
+      ${media.tabletPortrait`
+        right: auto;
+        left: 20px;
+      `}
     }
     &.slick-disabled {
       opacity: 1;
