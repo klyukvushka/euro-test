@@ -66,7 +66,6 @@ export const Banners = styled(BannersComponent)`
     color: #fff;
     max-width: 589px;
     margin-bottom: 62px;
-    font-size: 47px;
   }
   .slide-img {
     display: block;

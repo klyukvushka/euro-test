@@ -100,12 +100,12 @@ export const ContactForm = styled(ContactFormComponent)`
     margin: 0;
     .form-group {
       width: 255px;
-      ${media.phone`
+      ${media.tabletPortrait`
       width: 100%;
       max-width: 320px;
     `}
     }
-    ${media.phone`
+    ${media.tabletPortrait`
       flex-direction: column;
   `}
   }

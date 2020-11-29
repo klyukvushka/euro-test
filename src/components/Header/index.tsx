@@ -45,14 +45,43 @@ const topMenu = [
   },
 ];
 
+export const disableScroll = {
+  enable: () => {
+    document.body.style.overflow = "hidden";
+  },
+  disable: () => {
+    document.body.style.overflow = "";
+  },
+};
+
 const HeaderComponent: React.FC<Props> = ({ className }) => {
+  const [isToggled, setToggled] = React.useState(false);
+
+  const openMenu = () => {
+    setToggled(true);
+    disableScroll.enable();
+  };
+
+  const closeMenu = () => {
+    setToggled(false);
+    disableScroll.disable();
+  };
+
   return (
     <header className={className}>
       <Container className="header-container">
         <Logo />
-        <div className="menu-block">
+        <div
+          className={isToggled ? "header-mobile active" : "header-mobile"}
+          onClick={() => (isToggled ? closeMenu() : openMenu())}
+        >
+          <div className="header-mobile__item header-mobile__item_one"></div>
+          <div className="header-mobile__item header-mobile__item_two"></div>
+          <div className="header-mobile__item header-mobile__item_three"></div>
+        </div>
+        <div className={isToggled ? "menu-block active" : "menu-block"}>
           <TopMenu topMenu={topMenu} />
-          <Menu menu={menu} />
+          <Menu menu={menu} clickHandler={closeMenu} />
         </div>
       </Container>
     </header>
@@ -80,10 +109,59 @@ export const Header = styled(HeaderComponent)`
       margin-top: 15px;
   `}
     ${media.tabletPortrait`
+      display: none;
+  
+  `}
+  &.active {
+      ${media.tabletPortrait`
       display: flex;
       flex-direction: column-reverse;
+      justify-content: flex-end;
       background-color: #005fa3;
-      padding: 0 30px;
-  `}
+      padding: 45px 30px 0 30px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 12;
+      margin-top: 0
+    `}
+    }
+  }
+  .header-mobile {
+    display: none;
+    width: 35px;
+    height: 30px;
+    flex-shrink: 0;
+    ${media.tabletPortrait`
+      display: block;
+   
+    `}
+    &__item {
+      width: 100%;
+      height: 4px;
+      background: ${(props) => props.theme.colors.text};
+      margin: 4px auto;
+      transition: all 0.3s;
+      backface-visibility: hidden;
+    }
+    &.active {
+      position: fixed;
+      right: 17px;
+      z-index: 15;
+      .header-mobile__item {
+        background-color: #fff;
+        &_one {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+        &_two {
+          opacity: 0;
+        }
+        &_three {
+          transform: rotate(-45deg) translate(7px, -6px);
+        }
+      }
+    }
   }
 `;

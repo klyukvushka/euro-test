@@ -57,7 +57,7 @@ export const FontStyle = createGlobalStyle`
 @font-face {
     font-family: 'Merriweather';
     src: url("${MerriweatherBlackWoff2}") format('woff2'),
-url('${MerriweatherBlack}') format('woff');
+        url('${MerriweatherBlack}') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;

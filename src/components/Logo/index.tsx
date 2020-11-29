@@ -1,4 +1,5 @@
 import React from "react";
+import { media } from "../../config/media";
 import { styled } from "../../config/theme";
 import { LogoIcon } from "../ui-components/Icons";
 
@@ -25,5 +26,10 @@ export const Logo = styled(LogoComponent)`
   line-height: 49px;
   span {
     margin-left: 30px;
+    ${media.phone`
+      margin-left: 20px;
+      font-size: 30px;
+      line-height: 38px;
+  `}
   }
 `;

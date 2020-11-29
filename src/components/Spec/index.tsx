@@ -35,13 +35,17 @@ export const Spec = styled(SpecComponent)`
     font-size: 22px;
   `}
   ${media.tabletPortrait`
-    height: 340px
-  `}
-    ${media.phone`
+      height: 340px;
       max-width: 310px;
       width: 100%;
+      margin-left: 15px;
+      margin-right: 15px;
+  `}
+    ${media.phone`
       padding: 35px;
       font-size: 20px;
+      margin-left: 0;
+      margin-right: 0;
   `}
   span {
     position: relative;

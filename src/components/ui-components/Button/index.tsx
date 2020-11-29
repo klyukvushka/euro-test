@@ -1,4 +1,5 @@
 import { styled } from "../../../config/theme";
+import { media } from "../../../config/media";
 
 export const Button = styled.button`
   padding: 19px 18px;
@@ -14,8 +15,10 @@ export const Button = styled.button`
   height: 60px;
   border: none;
   cursor: pointer;
-  max-width: 270px;
-  width: 100%;
+  width: 270px;
+  ${media.phone`
+      width: 240px;
+  `}
   &:hover {
     background-color: #04538c;
   }

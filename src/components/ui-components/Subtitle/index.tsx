@@ -16,7 +16,7 @@ export const Subtitle = styled.p`
     line-height: 52px;
   `}
   ${media.phone`
-    font-size: 28px;
-    line-height: 30px;
+    font-size: 27px;
+    line-height: 34px;
   `}
 `;

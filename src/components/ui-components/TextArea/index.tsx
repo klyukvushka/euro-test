@@ -54,7 +54,7 @@ export const TextArea = styled(TextAreaComponent)`
     height: 116px;
     width: 540px;
     padding: 13px 0;
-    ${media.phone`
+    ${media.tabletPortrait`
       width: 100%
   `}
   }

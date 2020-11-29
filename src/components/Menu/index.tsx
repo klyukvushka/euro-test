@@ -8,9 +8,10 @@ type MenuItemProps = { name: string; to: string };
 type Props = {
   className?: string;
   menu: MenuItemProps[];
+  clickHandler: () => void;
 };
 
-const MenuComponent: React.FC<Props> = ({ className, menu }) => {
+const MenuComponent: React.FC<Props> = ({ className, menu, clickHandler }) => {
   return (
     <nav className={className}>
       <ul className="bottom-menu">
@@ -22,6 +23,7 @@ const MenuComponent: React.FC<Props> = ({ className, menu }) => {
               offset={0}
               duration={2000}
               className="bottom-menu__link"
+              onClick={clickHandler}
             >
               {item.name}
             </Link>
@@ -43,7 +45,7 @@ export const Menu = styled(MenuComponent)`
       &:last-child {
         margin-right: 0;
         ${media.tabletPortrait`
-        margin-bottom: 10px;
+          margin-bottom: 10px;
         `}
       }
       ${media.tabletPortrait`
