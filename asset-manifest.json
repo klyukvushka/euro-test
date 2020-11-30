@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/euro-test/static/js/main.f70c890d.chunk.js",
-    "main.js.map": "/euro-test/static/js/main.f70c890d.chunk.js.map",
+    "main.js": "/euro-test/static/js/main.aef3f419.chunk.js",
+    "main.js.map": "/euro-test/static/js/main.aef3f419.chunk.js.map",
     "runtime-main.js": "/euro-test/static/js/runtime-main.a5f73544.js",
     "runtime-main.js.map": "/euro-test/static/js/runtime-main.a5f73544.js.map",
     "static/css/2.09604b7d.chunk.css": "/euro-test/static/css/2.09604b7d.chunk.css",
@@ -39,6 +39,6 @@
     "static/js/runtime-main.a5f73544.js",
     "static/css/2.09604b7d.chunk.css",
     "static/js/2.c8830caf.chunk.js",
-    "static/js/main.f70c890d.chunk.js"
+    "static/js/main.aef3f419.chunk.js"
   ]
 }
